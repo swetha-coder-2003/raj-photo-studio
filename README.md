@@ -1,6 +1,6 @@
-# Raj Photo Studio Website
+# Raaj Photo Studio Website
 
-This repository contains the Raj Photo Studio website files.
+This repository contains the Raaj Photo Studio website files.
 
 ## Features
 - Responsive design

@@ -1,107 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raj Photo Studio | Wedding & Baby Photography in Chennai</title>
-    <meta name="description" content="Raj Photo Studio Chennai – experts in wedding photography, baby photoshoots,birthday functions and all event photography with creative and affordable packages.">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RAAJ Photo Studio | Wedding & Events Photography Chennai</title>
+<meta name="description" content="RAAJ Photo Studio – Wedding, Engagement, Birthday, Baby Shower, Puberty & All Event Photography in Chennai">
+
+<style>
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#f9f9f9;
+}
+header{
+  background:#000;
+  color:white;
+  padding:15px;
+  text-align:center;
+}
+header p{
+  margin:5px 0;
+}
+
+/* Banner */
+.banner{
+  height:300px;
+  background-size:cover;
+  background-position:center;
+  animation:bannerSlide 10s infinite;
+}
+@keyframes bannerSlide{
+  0%{background-image:url('banner1.jpeg')}
+  50%{background-image:url('banner2.jpeg')}
+  100%{background-image:url('banner1.jpeg')}
+}
+
+/* Buttons */
+button{
+  margin:5px;
+  padding:10px 15px;
+  cursor:pointer;
+  border:none;
+  background:#000;
+  color:white;
+  border-radius:5px;
+}
+button:hover{background:#333;}
+
+/* Galleries */
+.event{
+  display:none;
+  padding:20px;
+  animation:fadeIn 0.5s ease-in;
+  text-align:center;
+}
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(20px)}
+  to{opacity:1; transform:translateY(0)}
+}
+.event img{
+  width:200px;
+  margin:10px;
+  border-radius:10px;
+  transition:0.3s;
+}
+.event img:hover{
+  transform:scale(1.05);
+}
+
+/* Booking Form */
+form{
+  max-width:400px;
+  margin:auto;
+}
+input,textarea,button{
+  width:100%;
+  padding:10px;
+  margin:5px 0;
+}
+button.submit{
+  background:#000;
+  color:white;
+  cursor:pointer;
+}
+
+/* Contact */
+.contact{
+  background:#222;
+  color:white;
+  padding:20px;
+  text-align:center;
+}
+.contact a{
+  color:#00ffcc;
+  text-decoration:none;
+}
+
+/* WhatsApp Button */
+.whatsapp-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  font-size:30px;
+  padding:15px 18px;
+  border-radius:50%;
+  text-decoration:none;
+  box-shadow:0 4px 8px rgba(0,0,0,0.3);
+  z-index:1000;
+}
+.whatsapp-float:hover{
+  transform:scale(1.1);
+}
+</style>
 </head>
+
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1>Raj Photo Studio📷</h1>
-        <p>Capturing Your Best Moments📸</p>
-    </header>
+<header>
+<h1>RAAJ Photo Studio</h1>
+<p>Wedding • Engagement • Birthday • Baby Shower • Puberty • All Events</p>
+</header>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<!-- Banner -->
+<div class="banner"></div>
 
-    <!-- Home -->
-    <section id="home" class="section">
-        <h2>Welcome to Raj Photo Studio</h2>
-        <p>Professional photography services for weddings, events and portraits.</p>
-        <a href="https://wa.me/919384730930" target="_blank"><button>Book via WhatsApp</button></a>
-    </section>
+<!-- Event Buttons -->
+<section>
+<h2 style="text-align:center;">Select Event</h2>
+<div style="text-align:center;">
+<button onclick="showGallery('wedding')">Wedding</button>
+<button onclick="showGallery('engagement')">Engagement</button>
+<button onclick="showGallery('birthday')">Birthday</button>
+<button onclick="showGallery('baby')">Baby Shower</button>
+<button onclick="showGallery('puberty')">Puberty</button>
+<button onclick="showGallery('events')">Events</button>
+</div>
+</section>
 
-    <!-- About -->
-    <section id="about" class="section dark">
-        <h2>About Us</h2>
-        <p>
-            Raj Photo Studio is a professional photography studio with years of experience.
-            We capture weddings, birthdays, baby shoots and special moments with high quality.
-        </p>
-    </section>
+<!-- WEDDING -->
+<section id="wedding" class="event">
+<h2>Wedding Photography</h2>
+<img src="wedding1.jpeg">
+<img src="wedding2.jpeg">
+<img src="wedding3.jpeg">
+<img src="wedding4.jpeg">
+<img src="wedding5.jpeg">
+<img src="wedding6.jpeg">
+<img src="wedding7.jpeg">
+<img src="wedding8.jpeg">
+<img src="wedding9.jpeg">
+<img src="wedding10.jpeg">
+<img src="wedding11.jpeg">
+<img src="wedding12.jpeg">
+</section>
 
-    <!-- Services -->
-    <section id="services" class="section">
-        <h2>Our Services</h2>
-        <ul>
-            <li>Wedding Photography</li>
-            <li>Baby Photoshoot</li>
-            <li>Birthday & Event Photography</li>
-            <li>Passport Size Photos</li>
-            <li>Outdoor Photoshoot</li>
-        </ul>
-    </section>
+<!-- ENGAGEMENT -->
+<section id="engagement" class="event">
+<h2>Engagement Photography</h2>
+<img src="engage1.jpeg">
+<img src="engage2.jpeg">
+<img src="engage3.jpeg">
+</section>
 
-    <!-- Gallery -->
-    <section id="gallery" class="section dark">
-        <h2>Gallery</h2>
-        <div class="gallery">
-            <img src="imagesphoto1.jpeg" alt="Photo 1">
-            <img src="imagesphoto2.jpeg" alt="Photo 2">
-            <img src="imagesphoto3.jpeg" alt="Photo 3">
-        </div>
-    </section>
+<!-- BIRTHDAY -->
+<section id="birthday" class="event">
+<h2>Birthday Photography</h2>
+<img src="birthday1.jpeg">
+<img src="birthday2.jpeg">
+<img src="birthday3.jpeg">
+<img src="birthday4.jpeg">
+</section>
 
-    <!-- Contact -->
-    <section id="contact" class="section">
-        <h2>Contact Us</h2>
-        <p>📞 Phone: +91 93847 30930</p>
-        <p>📍 Address: 44/91, Gangai Nagar, Periyar Nagar, Thiruvottiyur High Road, Ponneri, Chennai - 601204 (Near L N G College)</p>
-        <h2>Contact Us</h2>
-<p>Call us: <a href="tel:+919384730930">+91 93847 30930</a></p>
-        <p>📸 WhatsApp: <a href="https://wa.me/+919384730930" target="_blank">Chat Now</a></p>
-        <p>📷 Instagram: <a href="https://www.instagram.com/raajphoto_studio?igsh=eXdwcmJ6czV1MjFs" target="_blank">@raajphoto_studio</a></p>
-        <p>Email: <a href="cserajkumar1@gmail.com">cserajkumar1@gmail.com</a></p>
-    </section>
-    <a href="https://wa.me/+919384730930" target="_blank">
-  <button style="padding:10px; background:green; color:white; border:none; border-radius:5px;">
-    📞 WhatsApp Us
-  </button>
-</a>
-    <a href="https://www.instagram.com/raajphoto_studio/" target="_blank">📸 Instagram</a>
-    <h3>Our Location</h3>
+<!-- BABY SHOWER -->
+<section id="baby" class="event">
+<h2>Baby Shower</h2>
+<img src="baby shower1.jpeg">
+<img src="baby shower2.jpeg">
+<img src="baby shower3.jpeg">
+<img src="baby shower4.jpeg">
+<img src="baby shower5.jpeg">
+<img src="baby shower6.jpeg">
+</section>
 
-<iframe 
-  src="https://maps.app.goo.gl/Xbe2q25FFckEShsZ6"
-  width="100%" 
-  height="300" 
-  style="border:0;" 
-  allowfullscreen="" 
-  loading="lazy">
-</iframe>
+<!-- PUBERTY -->
+<section id="puberty" class="event">
+<h2>Puberty Ceremony</h2>
+<img src="puberty1.jpeg">
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 Raj Photo Studio. All Rights Reserved.</p>
-    </footer>
+<!-- EVENTS -->
+<section id="events" class="event">
+<h2>Other Events</h2>
+<img src="event1.jpeg">
+<img src="event2.jpeg">
+</section>
+
+<!-- BOOKING FORM -->
+<section>
+<h2 style="text-align:center;">Online Booking</h2>
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="tel" placeholder="Phone Number" required>
+<input type="email" placeholder="Email" required>
+<textarea placeholder="Event Details"></textarea>
+<button type="submit" class="submit">Book Now</button>
+</form>
+</section>
+
+<!-- CONTACT -->
+<div class="contact">
+<h2>Contact Us</h2>
+<p>📞 9444281826 | +91 93847 30930</p>
+<p>📧 <a href="mailto:cserajkumar1@gmail.com">cserajkumar1@gmail.com</a></p>
+<p><a href="https://maps.app.goo.gl/21wWT228R9AbCbag6" target="_blank">📍 View Location on Google Maps</a></p>
+</div>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/919444281826" target="_blank" class="whatsapp-float">💬</a>
+
+<!-- JS for Gallery Toggle -->
+<script>
+function showGallery(id){
+  let events=document.querySelectorAll('.event');
+  events.forEach(e=>e.style.display="none");
+  document.getElementById(id).style.display="block";
+}
+</script>
 
 </body>
-
 </html>
-
-
-
-
-
-
-

@@ -1,111 +1,143 @@
-/* Basic styles */
+/* General body */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background: #f9f9f9;
     color: #333;
 }
 
 /* Header */
 header {
-    background-color: black;
+    background: #000;
     color: white;
-    text-align: center;
-    padding: 30px;
-}
-
-/* Navigation */
-nav {
-    background-color: #222;
-    text-align: center;
-    padding: 10px;
-}
-
-nav a {
-    color: white;
-    margin: 15px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: orange;
-}
-
-/* Sections */
-.section {
-    padding: 40px;
+    padding: 15px;
     text-align: center;
 }
-
-.dark {
-    background-color: #111;
-    color: white;
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+header p {
+    margin: 5px 0 0 0;
 }
 
-/* Button */
+/* Banner */
+.banner {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    animation: bannerSlide 10s infinite;
+}
+@keyframes bannerSlide {
+    0% { background-image: url('banner1.jpeg'); }
+    50% { background-image: url('banner2.jpeg'); }
+    100% { background-image: url('banner1.jpeg'); }
+}
+
+/* Event buttons */
 button {
-    padding: 10px 20px;
-    background-color: orange;
-    border: none;
-    color: black;
-    font-size: 16px;
+    margin: 5px;
+    padding: 10px 15px;
     cursor: pointer;
-    margin-top: 10px;
+    border: none;
+    background: #000;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
 }
-
 button:hover {
-    background-color: darkorange;
+    background: #333;
 }
 
-/* Services list */
-ul {
-    list-style: none;
-    padding: 0;
+/* Gallery/Event section */
+.event {
+    display: none;
+    padding: 20px;
+    animation: fadeIn 0.5s ease-in;
+    text-align: center;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.event img {
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.event img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-ul li {
-    padding: 8px;
-    font-size: 18px;
+/* Booking form */
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 15px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+button.submit {
+    background: #000;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+button.submit:hover {
+    background: #333;
 }
 
-/* Gallery */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+/* Contact section */
+.contact {
+    background: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.contact a {
+    color: #00ffcc;
+    text-decoration: none;
+}
+.contact a:hover {
+    text-decoration: underline;
 }
 
-.gallery img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    transition: transform 0.3s;
+/* WhatsApp floating button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    font-size: 30px;
+    padding: 15px 18px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: 0.3s;
 }
-
-.gallery img:hover {
+.whatsapp-float:hover {
     transform: scale(1.1);
 }
 
-/* Footer */
-footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
-
-/* Mobile Responsive */
+/* Responsive */
 @media (max-width: 768px) {
-    .gallery img {
-        width: 90%;
-        height: auto;
-    }
-
-    nav a {
-        display: block;
-        margin: 10px 0;
+    .event img {
+        width: 100%;
+        max-width: 300px;
     }
 }
